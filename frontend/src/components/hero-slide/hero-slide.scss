@@ -1,0 +1,253 @@
+@use '../../scss'as *;
+
+.hero-slide {
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+
+.hero-slide__item {
+  padding: 3rem 0;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 95vh;
+
+  @include mobile {
+    height: 100%;
+    
+  }
+  @include tablet {
+    height: 100%;
+    
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include overlay();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+
+    @include mobile {
+      height: 75px;
+    }
+  }
+  .fix-display{
+    @include mobile{
+      display: none
+    }
+  }
+
+  &__content {
+    @include flex(center, space-between);
+
+    &__register {
+      margin-right: 24px;
+      color: $white;
+      width: 55%;
+      @include mobile {
+        width: 100%;
+      }
+      padding: 0 3rem;
+      position: relative;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      @include tablet {
+        width: 100%;
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      &>*~* {
+        margin-top: 3rem;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        text-align: center;
+      }
+
+      h3 {
+        margin-top: 9px;
+        text-align: center;
+      }
+
+      h1,
+      h3,
+      .webflow-style-input {
+        
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: transform 0.5s ease, opacity 0.5s ease;
+
+        ::placeholder{
+          word-spacing: 2.4px;
+        }
+      }
+    }
+
+    &__poster {
+
+      @include flex(center, flex-start);
+      position: relative;
+      right: 10%;
+
+      img {
+        width: 378px;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        transform: scale(0);
+        transition: transform 0.7s ease;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+
+
+  &.active>&__content>a>&__content__poster {
+    img {
+      transform: scale(1);
+    }
+  }
+
+  &.active>&__content>&__content__register {
+
+    h1,
+    h3,
+    .webflow-style-input {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      transition-delay: 0.3s, 0.3s;
+    }
+
+    h3 {
+      transition-delay: 0.6s, 0.6s;
+    }
+
+    .webflow-style-input {
+      transition-delay: 0.6s, 0.6s;
+    }
+  }
+
+
+}
+
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+.webflow-style-input {
+  margin: 3rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 2px;
+  padding: 1.4rem 1rem 1.6rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.webflow-style-input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+  background-size: 500% auto;
+  -webkit-animation: gradient 3s linear infinite;
+  animation: gradient 3s linear infinite;
+}
+
+.webflow-style-input input {
+  flex-grow: 1;
+  color: $white;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+
+.webflow-style-input input::-webkit-input-placeholder {
+  color: $white;
+  font-size: 1.3rem;
+}
+
+.webflow-style-input button {
+  color: $input-text-inactive;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color .25s;
+  
+  &:hover {
+    color: $input-text-active;
+  }
+
+  outline:none;
+  border: unset;
+}
+
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,109 @@
+@use "../../scss/" as *;
+.wrap-something{
+    margin-top: 18px;
+}
+h3{
+    text-align: center;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+.movie-card {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150%;
+    border-radius: $border-radius;
+    margin-bottom: 1rem;
+    @include flex(center,center);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 200;
+    
+    &__add{
+        top: 10px;
+        right: 18px;
+        font-size: 1.3rem;
+        color:white;
+    }
+    &__eye{
+        bottom: 7px;
+        margin-right: 39px;
+    }
+    &__eye, &__add{
+        position: absolute;
+        display: none;
+    }
+
+    &__eye:hover, &__add:hover{
+        color:rgb(33, 183, 199);
+    }
+    
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $black;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: $border-radius;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            opacity: 0.6;
+        }
+
+        &:hover{
+            .movie-card__eye, .movie-card__add{
+                display: block;
+            }
+        }
+        
+
+    }
+}
+
+.more{
+    position: absolute;
+    top: 10px;
+    right:10px;
+    font-size:1.1rem;
+    color:$white;
+    width: 25px;
+    text-align: center;
+    z-index: 10000;
+    background-color:$white;
+    color:black;
+    border-radius: $border-radius;
+}
+
+.more:hover{
+    background-color:rgb(31, 167, 190);
+}
+.wrap-something{
+    position: relative;
+}
+
+.handle__list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    content: "";
+    max-height: 300px;
+    visibility: hidden;
+}

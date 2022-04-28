@@ -1,0 +1,34 @@
+@use '../../scss/'as *;
+
+.container {
+
+
+    .movie-card {
+        padding-top: 150%;
+        border-radius: $border-radius;
+    }
+
+    .header-people {
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin: 1.2rem 0;
+    }
+
+    .mask {
+
+        border: 1px solid $black;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        .cast_name {
+            margin-left: 10px;
+        }
+
+        
+    }
+
+}
+
+.page-link{
+    color:$black;
+}

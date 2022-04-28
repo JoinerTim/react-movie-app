@@ -1,0 +1,146 @@
+@use '../../scss/'as *;
+
+
+.form-set-send {
+    background-color: $white;
+    border-top: 1px solid $black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    
+
+
+    .header--form-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            margin: 1.5rem 0px 2.3rem;
+        }
+    }
+
+    .form-group-send {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 6.5rem;
+
+        @include mobile {
+            padding: 0 1rem;
+        }
+        @include tablet {
+            padding: 0 2rem;
+        }
+
+        form {
+            @include mobile {
+                width: 100%;
+            }
+            @include tablet {
+                width: 100%;
+            }
+            box-shadow: $box-shadow;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            width: 55%;
+            margin-left: 1.3rem;
+            background-color: rgb(244, 244, 244);
+            outline: none;
+            overflow: hidden;
+
+            .form-one {
+                flex: 3;
+            }
+
+            .form-two {
+                flex: 2;
+            }
+
+            .form-one,
+            .form-two {
+                display: flex;
+                flex-direction: column;
+                padding: 10px 15px;
+
+                label {
+                    color: black;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin: 1rem 15px;
+                    text-align: start;
+                }
+
+                input {
+                    display: block;
+                    width: 90%;
+                    box-shadow: $box-shadow;
+                    padding: 10px 11px;
+                    margin-left: 1rem;
+                    border-radius: 4px;
+                    background-color: white;
+                    outline: none;
+                    margin-bottom: 1.5rem;
+                }
+
+                button {
+                    border: 3px solid $black;
+                    background-color: transparent !important;
+                    color: $black;
+                    box-shadow: unset;
+                    transition: color .3s ease, background-color .3s ease;
+
+                    &:hover {
+                        box-shadow: unset;
+                        color: $white;
+                        background-color: $black !important;
+                    }
+                }
+
+                textarea {
+                    border-radius: 10px;
+                    padding: 10px 11px;
+                    min-height: 157px;
+                    max-height: 157px;
+                    overflow-y: auto;
+                    width: 100%;
+                    outline: none;
+                    margin-bottom: 1.5rem;
+                    border: none;
+                    box-shadow: $box-shadow;
+                }
+
+                .message-success {
+                    display: none;
+
+                    h4 {
+                        font-size: 0.8rem;
+                        margin: 1rem 0 0px;
+                        top: 32px;
+                        position: relative;
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .form-group-support {
+        width: 40%;
+        border-radius: 15px;
+        width: 50%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px 20px 24px 1rem;
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+}

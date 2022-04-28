@@ -1,0 +1,42 @@
+@use '../../scss/'as *;
+
+.video {
+    margin-bottom: 3rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+
+}
+
+.video {
+    
+    img {
+        position: relative;
+        cursor: pointer;
+        border-radius: $border-radius;
+
+        &::before {
+            content: "";
+            position: absolute !important;
+            top: 0;
+            z-index: 10000;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: black;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: $border-radius;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover::before {
+                opacity: 0.6;
+            }
+        }
+
+        
+    }
+}

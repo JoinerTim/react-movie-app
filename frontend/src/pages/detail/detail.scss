@@ -1,0 +1,218 @@
+@use "../../scss/" as *;
+
+.banner {
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mobile{
+        height: 50vh;
+    }
+    @include tablet {
+        height: 50vh;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include overlay(#000000,0.7);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+    }
+}
+
+.case{
+    margin: 2rem;
+    .section__header{
+        h2{
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.swiper-slide{
+    width: 15%;
+
+    @include tablet {
+        width: 30%;
+    }
+
+    @include mobile {
+        width: 40%;
+    }
+}
+
+
+.movie-content {
+    @include flex(center, flex-start);
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: calc($header-height - 3rem) 2rem;
+
+    &__poster {
+        flex: 1;
+
+        @include mobile {
+            display: none;
+        }
+
+        &__img {
+            @include tablet{
+                display: none;
+            }
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: $border-radius;
+            padding-top: 168%;
+        }
+    }
+    &__info{
+        width: 70%;
+        @include tablet{
+            width: 100%;
+        }
+        padding-left: 2rem;
+        position: relative;
+
+        h4{
+            margin-bottom: 12px;
+            font-size: 2.4rem;
+            color: white;
+        }
+
+        .overview{
+            color:$white;
+        }
+
+        @include mobile{
+            width: 100%;
+            padding-left: 0;
+        }
+
+        & > * {
+            margin-bottom: 2rem;
+        }
+
+        .title{
+            font-size: 3.1rem;
+            font-weight: 700;
+            line-height: 1;
+            color:$white;
+
+            @include mobile {
+                font-size: 1.8rem;
+
+                
+            }
+            .span--year{
+                font-size: 3.1rem;
+                @include mobile{
+                    font-size: 1.8rem;
+                }
+            }
+            
+        }
+
+        .genres{
+            & > *~* {
+                margin-left: .5rem;
+            }
+
+            &__item{
+                padding: .5rem 1.5rem;
+                border:2px solid $white;
+                border-radius: $border-radius;
+                font-size:.8rem;
+                font-weight: 600;
+                background-color: $body-bg;
+                color:$white;
+            }
+        }
+    }
+    
+}
+
+
+    
+.casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap:10px;
+
+    &__item{
+        &__img{
+            padding-top: 160px;
+            background-size: cover;
+            margin-bottom: 0.5rem;
+        }
+
+        &__name{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+
+
+.actions{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+
+    & > *~* {
+        margin-left: 3rem;
+        
+    }
+    .actions-item__users{
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 2.6rem;
+        font-weight: 900;
+        border-radius: 10px;
+    }
+
+
+    a, .actions-item-fix{
+        box-sizing: border-box;
+        background: rgb(11, 113, 131);
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        cursor: pointer;
+        color: white;
+        font-size: 1.4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        span{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

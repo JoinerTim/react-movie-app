@@ -1,0 +1,68 @@
+@use "../../scss/" as *;
+
+
+.casts{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 52px;
+    margin: 0 auto;
+
+    @include mobile {
+        overflow-x: auto;
+        gap: 15px;
+    }
+    @include tablet {
+        overflow-x: auto;
+        gap: 35px;
+    }
+}
+.casts__item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 4px;
+        border: 1px solid #444;
+        padding-bottom: 10px;
+        overflow: hidden;
+        border-radius: 5px;
+        min-width: 179px;
+        width: 179px;
+        height: 320px;
+        min-height: 310px;
+        background-color: #fff;
+        @include mobile {
+            min-height: 216px;
+            height: 216px;
+            min-width: 118px;
+            width: 118px;
+        }
+        @include tablet {
+            min-height: 264px;
+            min-width: 134px;
+            height: 264px;
+            width: 134px;
+        }
+
+        &__img {
+            padding-top: 120%;
+            position: relative;
+            top:-15px;
+        }
+
+        &__name {
+            text-align: center;
+            color:black;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        &__character{
+            color: #444;
+            font-weight: 300;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+}
+

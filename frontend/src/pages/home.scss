@@ -1,0 +1,32 @@
+@use '../scss/' as *;
+.header__trending{
+    @include flex(center, unset);
+
+    @include mobile {
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+    .heading__trending__cores{
+    @include flex(center, unset);
+        margin-left: 2rem;
+
+        padding: 5px 5px;
+        border-radius: $border-radius;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        border: 1px solid black;
+        &__today, &__thisweek{
+            padding: 0px 7px;
+            cursor: pointer;
+        }
+
+        .show{
+            background-color: black;
+            color:white;
+            height: 100%;
+            border-radius: inherit;
+        }
+    }
+}

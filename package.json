@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^3.5.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "emailjs": "^3.8.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.8",
+    "node": "^17.7.2",
+    "nodemailer": "^6.7.3",
+    "react-paginate": "^8.1.2",
+    "react-toastify": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "name": "reactmovie2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "proxy":"http://localhost:5000"
+}

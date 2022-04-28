@@ -1,0 +1,144 @@
+.form-set-send {
+  background-color: #fff;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.form-set-send .header--form-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-set-send .header--form-contact h2 {
+  margin: 1.5rem 0px 2.3rem;
+}
+.form-set-send .form-group-send {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6.5rem;
+}
+@media screen and (max-width: 600px) {
+  .form-set-send .form-group-send {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .form-set-send .form-group-send {
+    padding: 0 2rem;
+  }
+}
+.form-set-send .form-group-send form {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin-left: 1.3rem;
+  background-color: #f4f4f4;
+  outline: none;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .form-set-send .form-group-send form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .form-set-send .form-group-send form {
+    width: 100%;
+  }
+}
+.form-set-send .form-group-send form .form-one {
+  flex: 3;
+}
+.form-set-send .form-group-send form .form-two {
+  flex: 2;
+}
+.form-set-send .form-group-send form .form-one,
+.form-set-send .form-group-send form .form-two {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+.form-set-send .form-group-send form .form-one label,
+.form-set-send .form-group-send form .form-two label {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 15px;
+  text-align: start;
+}
+.form-set-send .form-group-send form .form-one input,
+.form-set-send .form-group-send form .form-two input {
+  display: block;
+  width: 90%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
+  padding: 10px 11px;
+  margin-left: 1rem;
+  border-radius: 4px;
+  background-color: white;
+  outline: none;
+  margin-bottom: 1.5rem;
+}
+.form-set-send .form-group-send form .form-one button,
+.form-set-send .form-group-send form .form-two button {
+  border: 3px solid #000;
+  background-color: transparent !important;
+  color: #000;
+  box-shadow: unset;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.form-set-send .form-group-send form .form-one button:hover,
+.form-set-send .form-group-send form .form-two button:hover {
+  box-shadow: unset;
+  color: #fff;
+  background-color: #000 !important;
+}
+.form-set-send .form-group-send form .form-one textarea,
+.form-set-send .form-group-send form .form-two textarea {
+  border-radius: 10px;
+  padding: 10px 11px;
+  min-height: 157px;
+  max-height: 157px;
+  overflow-y: auto;
+  width: 100%;
+  outline: none;
+  margin-bottom: 1.5rem;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
+}
+.form-set-send .form-group-send form .form-one .message-success,
+.form-set-send .form-group-send form .form-two .message-success {
+  display: none;
+}
+.form-set-send .form-group-send form .form-one .message-success h4,
+.form-set-send .form-group-send form .form-two .message-success h4 {
+  font-size: 0.8rem;
+  margin: 1rem 0 0px;
+  top: 32px;
+  position: relative;
+  color: blue;
+}
+.form-set-send .form-group-support {
+  width: 40%;
+  border-radius: 15px;
+  width: 50%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px 20px 24px 1rem;
+}
+@media screen and (max-width: 600px) {
+  .form-set-send .form-group-support {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .form-set-send .form-group-support {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+.header__trending {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .header__trending h2 {
+    font-size: 1.3rem;
+  }
+}
+.header__trending .heading__trending__cores {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  margin-left: 2rem;
+  padding: 5px 5px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.header__trending .heading__trending__cores__today, .header__trending .heading__trending__cores__thisweek {
+  padding: 0px 7px;
+  cursor: pointer;
+}
+.header__trending .heading__trending__cores .show {
+  background-color: black;
+  color: white;
+  height: 100%;
+  border-radius: inherit;
+}
